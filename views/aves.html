@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Aves</title>
+	<link rel="shortcut icon" href="../img/huella.png" type="image/png">
+	<link rel="stylesheet" href="../css/estilos.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md shadow-sm fixed-top h5 p-2.5 ml-5 ">
+        <div class="container-fluid">
+            <a class="navbar-brand mr-5" href="#" >
+                <img src="../img/logo.png" alt="logo" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-underline mx-auto">
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../views/mamiferos.html">Mamiferos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../views/aves.html">Aves</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../views/servicio.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../views/contacto.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./views/datos.html">Datos</a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav md-auto" >
+                    <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
+                    <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
+                    <a class="nav-link" href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a class="nav-link" href="#"><i class="bi bi-github"></i></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="head-aves p-lg-5">
+        <div class="container-fluid py-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb p-3 " >
+                  <li class="breadcrumb-item active " aria-current="page"> <a class="text-white" href="../index.html">Inicio</a> </li>
+                  <li class="breadcrumb-item active text-white" aria-current="page">Aves</li>
+                </ol>
+            </nav>
+            <h1>Localizacion y mapa de ubicaciones.</h1>
+            <p>Conoce las diferentes especies de aves en la biodiversidad Cundiboyacense.</p>
+            <div class="row position-relative">
+                <div class="col-md-6">
+                    <img class="img-fluid mt-5" src="../img/Animals/birds3.jpeg" alt="mapa" style="width: 100%;">
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+                    <h1 class="text-white text-center">La Avifauna de región Cundiboyacense de Colombia.</h1>
+                    <p class="text-white text-center mt-5">La región Cundiboyacense de Colombia es hogar de una rica y diversa avifauna, que juega un papel crucial en la biodiversidad del país. Colombia es reconocida por tener la mayor diversidad de aves en el mundo1, y la región Cundiboyacense contribuye significativamente a esta diversidad
+						Las aves de esta región son importantes por varias razones. En primer lugar, muchas de estas aves son endémicas de la región, lo que significa que no se encuentran en ninguna otra parte del mundo. Esto las hace únicas y valiosas para la conservación de la biodiversidad. Además, las aves desempeñan un papel vital en los ecosistemas, como polinizadores y controladores de plagas.	
+						La avifauna de la región Cundiboyacense también es un indicador de la salud de los ecosistemas locales. Las aves son sensibles a los cambios en su entorno, por lo que su presencia y diversidad pueden proporcionar información valiosa sobre la calidad del hábitat y los impactos de las actividades humanas en el medio ambiente.</p>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="container-fluid mapa-fondo2">
+        <div class="container mapa-fondo2">
+
+            <section class="py-5">
+                <div class="container px-4 ">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col">
+                            <h3 class="text-start text-white">Busca tu Ave</h3>
+                            <!-- Barra de búsqueda -->
+                            <form class="d-flex">
+                                <select id="animals2" class="form-control me-2" style="width: 50%;">
+                                    <option value="-1">Selecciona un Ave:</option>
+                                    <option value="6.998563093983256, -72.7363245700896">Condor Andino</option>
+                                    <option value="5.017219328050363, -74.29674561924905">Colibri Esmeralda</option>	
+                                    <option value="5.397056350810991, -73.23763851932951">Aguila de Montaña</option>
+                                    <option value="6.221404426693992, -73.45073807864507">Carpintero Dorado</option>
+                                </select>
+                                <button class="btn btn-success" type="submit">Buscar</button>
+                            </form>
+                            <div class="my-4"></div>
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <div class="container-fluid mapa-fondo2">
+                <div class="container mapa-fondo2">
+                    <div class="d-flex flex-wrap flex-row-reverse mt-5">
+                        <div class="card d-flex flex-column justify-content-between ms-2 mb-5 mi-card bg-white">
+                            <div class="card-header">
+                                <img class="img-fluid" src="../img/Animals/Condor2.jpeg" alt="img-condor">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Condor Andino</h5>                   
+                                <h6 class="card-title">Paramo del Almorzadero (santander)</h6>
+                                <p class="card-text lead">En el Páramo del Almorzadero, ubicado en la reserva natural Piedra del Cóndor del municipio de San Andrés, se ha registrado recientemente el avistamiento de varios ejemplares de Cóndor Andino.</p>                                       
+                            </div>       
+                        </div>
+                
+                        <div class="card d-flex flex-column justify-content-between ms-2 mb-5 mi-card bg-white">
+                            <div class="card-header">
+                                <img class="img-fluid" src="../img/Animals/Colibri2.jpeg" alt="img-colibri">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Colibri Esmeralda</h5>
+                            <h6 class="card-title">Jardin Encantado San Francisco (San Francisco, Cundinamarca)</h6>
+                            <p class="lead card-text">Este jardín atrae más de 25 especies de colibríes de las 165 que han sido clasificadas en Colombia. Es un punto de referencia para los ornitólogos, fotógrafos especializados, ambientalistas y amantes de la naturaleza.</p>                  
+                            </div>
+                        </div>
+
+                        <div class="card d-flex flex-column justify-content-between ms-2 mb-5 mi-card bg-white">
+                            <div class="card-header">
+                                <img class="card-img-top img-fluid" src="../img/Animals/Aguila2.jpeg" alt="img-aguila">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Aguila Real de Montaña</h5>
+                                <h6 class="card-title">Páramo Mamapacha Bijagua (Altiplano Cundiboyacense)</h6>
+                                <p class="lead card-text">El águila real de montaña, también conocida como águila crestada o Spizaetus isidori, es una especie de ave rapaz que se encuentra en los Andes Colombianos. En la región cundiboyacense, se ha registrado su presencia en el departamento de Boyacá3. Esta especie prefiere los bosques húmedos montanos y debido a la destrucción de su hábitat y a la cacería, su estado de conservación es vulnerable.</p>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-column justify-content-between ms-2 mb-5 mi-card bg-white">
+                            <div class="card-header">
+                                <img class="card-img-top img-fluid" src="../img/Animals/Carpintero2.jpeg" alt="img-carpintero">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Carpintero Dorado</h5>
+                                <h6 class="card-title">Cascada de Los Caballeros (Santander Suaita)</h6>
+                                <p class="lead card-text">Los pájaros carpinteros son aves caracterizadas por ser trepadoras de árboles y por picotear sus cortezas. Estos pájaros conforman la familia Picidae (orden Piciforme) con alrededor de 218 especies descritas. Estas aves pueden pesar entre 8 gramos (en el caso de los carpinteros del género Sasia).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer container-fluid p-1 mt-0">
+        <div class="footer container">
+            <div class="row text-white">
+            
+                <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start text-center text-md-start mb-4 mt-4">
+                    <img src="../img/logo.png" alt="logo" width="120px">
+                    <a href="../index.html" class="text-white text-decoration-none">Inicio</a>
+                    <a href="./mamiferos.html" class="text-white text-decoration-none">Mamiferos</a>
+                    <a href="./aves.html" class="text-white text-decoration-none">Aves</a>
+                    <a href="./servicio.html" class="text-white text-decoration-none">Servicios</a>
+                    <a href="./contacto.html" class="text-white text-decoration-none">Contactanos</a>
+                </div>
+                <div class="col-md-4 mb-4 text-center mt-4">
+                  <address>
+                      <h3>Ubicación</h3>
+                      <p> <i class="bi bi-geo-alt-fill"></i> Calle 65A #45-26 Colombia</p>
+                      <p> <i class="bi bi-telephone-fill"></i> +573558974563</p>
+                      <p> <i class="bi bi-envelope-fill"></i> ZooTourist@gmail.com</p>
+                  </address>
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-center align-items-md-end text-center text-md-start mb-4 mt-4">
+                    <ul class="navbar-nav md-auto">
+                        <li><a class="nav-link" href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a class="nav-link" href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a class="nav-link" href="#"><i class="bi bi-twitter-x"></i></a></li>
+                        <li><a class="nav-link" href="#"><i class="bi bi-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script src="../js/mapa_aves.js""></script>
+    
+  </body>
+</html>

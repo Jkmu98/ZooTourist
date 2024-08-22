@@ -1,0 +1,156 @@
+.navbar {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: normal !important;
+  transition: top 0.5s;
+}
+
+.nav-link{
+  color:  rgb(0, 0, 0)!important;
+ 
+}
+
+.navbar-nav .nav-item:hover .nav-link,
+.navbar-nav .nav-link:hover {
+    font-size: 30px; /* Cambia el tamaño del texto al pasar el mouse */
+    transition: font-size 0.5 s; /* Agrega una transición de 0.3 segundos */
+}
+
+.nav-link1{
+  color: rgb(0, 0, 0) !important;
+}
+
+
+.navbar.hide {
+  top: -100px;
+}
+
+.head{
+  background-color: rgb(163, 111, 13);
+}
+
+.mapa-fondo{
+  background-color: rgb(83, 56, 5);
+}
+
+.head-aves{
+  background-color: #6fac20;
+}
+
+.mapa-fondo2{
+  background-color: #109ea3;
+}
+
+/* .mi-carousel-img {
+  max-width: 100%;
+  height: auto;
+} */
+
+
+
+
+.mi-imagen {
+  height: 100%;
+  object-fit: cover; /* Esto asegura que la imagen se redimensione correctamente */
+}
+
+.carousel-caption img{
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.carousel-caption h5{
+  font-weight: bold;
+  color: rgb(223, 205, 44);
+  font-size: 45px;
+  margin-bottom: 0px;
+  text-align: left;
+  margin-left: 75px;
+}
+.carousel-caption h4{
+  color: #fff400;
+  margin-top: 5%;
+  font-size: 20px;
+  margin-top: 15px;
+  text-align: left;
+  margin-left: 75px;
+}
+.carousel-caption{
+  left: 5%;
+  right: auto;
+  transform: none;
+  top: 25%;
+  width: 70%;
+  display: flex;
+  justify-content: flex-start ;
+  
+  
+}/* Ajusta la altura de las imágenes dentro del carrusel */
+.carousel-inner > .carousel-item > img {
+  height: 700px; /* Ajusta esta altura según tus necesidades */
+}
+
+/* Ajusta la altura del carrusel en general */
+.carousel-inner {
+  width: 100%;
+  height: 700px; /* Ajusta esta altura según tus necesidades */
+}
+
+
+
+.fond-mamif{
+  background-color: rgb(108, 122, 25);
+}
+
+.fond-aves{
+  background-color: rgb(167, 136, 36);
+}
+
+.sombra{
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 1);
+}
+
+
+.titulo-seccion {
+  color: rgb(255, 255, 255);
+}
+
+
+.mi-card {
+  flex: 1 1 200px;
+  max-width: 400px;
+  background-color: #858583;
+}
+
+
+
+.card-body p{
+  font-size: 15px;
+}
+
+.footer{
+  background-color: rgb(10, 138, 52);
+}
+
+
+footer a {
+  color: inherit;
+}
+
+footer a:hover{
+  background-color: rgb(219, 189, 21)
+}
+
+#map {
+  height: 90vh;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; 
+}
+
+
+
+
+
